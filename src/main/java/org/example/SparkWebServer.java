@@ -26,22 +26,43 @@ public class SparkWebServer {
         get("cos/:num",(req,res) -> {
 
             int param = Integer.parseInt(req.params(":num"));
-            return "cos of " + req.params(":num") + Math.sin(param);
+            return "cos of " + req.params(":num") + Math.cos(param);
         });
 
 
 
-        get("palindromo/:num",(req,res) -> {
+        get("palindromo/:word",(req,res) -> {
 
-            int param = Integer.parseInt(req.params(":num"));
-            return "Sin of " + req.params(":num") + Math.sin(param);
+            String word = (req.params(":word"));
+            int i = 0;
+            int j = word.length()-1;
+            boolean valid = true;
+
+            while (i != j) {
+                char characterInit = word.charAt(i);
+                char characterLast = word.charAt(j);
+                if(characterInit != characterLast){
+                    valid = false;
+                    break;
+                }
+                i += 1;
+                j -= 1;
+
+            }
+            if(valid){
+                return "IS PALINDROME";
+            }
+            return "IS NOT PALINDROME";
         });
 
 
         get("magnitud/:num1/:num2",(req,res) -> {
 
-            int param = Integer.parseInt(req.params(":num"));
-            return "Sin of " + req.params(":num") + Math.sin(param);
+            float num1 = Float.parseFloat(req.params(":num1"));
+            float num2 = Float.parseFloat(req.params(":num2"));
+
+            return "magnitud = " + Math.sqrt(Math.pow(num1,2) + Math.pow(num2,2));
+
         });
 
 

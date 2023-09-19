@@ -7,7 +7,7 @@ public class page {
                 "<!DOCTYPE html>\n" +
                 "<html>\n" +
                 "<head>\n" +
-                "    <title>Formulario con Fetch GET</title>\n" +
+                "    <title>Bono</title>\n" +
                 "</head>\n" +
                 "<body>\n" +
                 "    <h1>Formulario con Fetch GET</h1>\n" +
@@ -35,27 +35,28 @@ public class page {
                 "            var campo1 = document.getElementById(\"campo1\").value;\n" +
                 "            var campo2 = document.getElementById(\"campo2\").value;\n" +
                 "            var campo3 = document.getElementById(\"campo3\").value;\n" +
-                "            var campo4 = document.getElementById(\"campo4\").value;\n" +
+                "            var campo4 = document.getElementById(\"campo4\").split(\",\");\n" +
+                        "    var campo5 = document.getElementById(\"campo4\").split(\",\");\n" +
                 "var URL =" + "http://localhost:36000/" + "\n"+
-                "                    fetch(URL" + "sin" + ")\n" +
+                "                    fetch(URL\" + \"sin/\" + \"campo1)\n" +
                         "                .then(response => response.text())\n" +
                         "                .then(data => {\n" +
                         "                    document.getElementById(\"resultado\").innerHTML = \"Resultado Campo 1: \" + data;\n" +
                         "                });\n" +
                         "\n" +
-                        "            fetch('URL2?campo2=' + campo2)\n" +
+                        "            fetch(URL\" + \"cos/\" + \"campo2)\n" +
                         "                .then(response => response.text())\n" +
                         "                .then(data => {\n" +
                         "                    document.getElementById(\"resultado\").innerHTML += \"<br>Resultado Campo 2: \" + data;\n" +
                         "                });\n" +
                         "\n" +
-                        "            fetch('URL3?campo3=' + campo3)\n" +
+                        "            fetch(URL\" + \"palindromo/\" + \"campo3)\n" +
                         "                .then(response => response.text())\n" +
                         "                .then(data => {\n" +
                         "                    document.getElementById(\"resultado\").innerHTML += \"<br>Resultado Campo 3: \" + data;\n" +
                         "                });\n" +
                         "\n" +
-                        "            fetch('URL4?campo4=' + campo4)\n" +
+                        "            fetch(URL\" + \"magnitud/\" + \"campo4/ + campo5)\n" +
                         "                .then(response => response.text())\n" +
                         "                .then(data => {\n" +
                         "                    document.getElementById(\"resultado\").innerHTML += \"<br>Resultado Campo 4: \" + data;\n" +
