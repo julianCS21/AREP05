@@ -19,13 +19,13 @@ public class SparkWebServer {
         get("bonoForms",(req,res) -> pageForm.getPage());
         get("sin",(req,res) -> {
 
-            int param = Integer.parseInt(req.params("num"));
+            int param = Integer.parseInt(req.queryParams("num"));
             return "sin of " + req.params("num") + Math.sin(param);
         });
 
         get("cos",(req,res) -> {
 
-            int param = Integer.parseInt(req.params("num"));
+            int param = Integer.parseInt(req.queryParams("num"));
             return "cos of " + req.params("num") + Math.cos(param);
         });
 
@@ -58,8 +58,8 @@ public class SparkWebServer {
 
         get("magnitud",(req,res) -> {
 
-            float num1 = Float.parseFloat(req.params("num1"));
-            float num2 = Float.parseFloat(req.params("num2"));
+            float num1 = Float.parseFloat(req.queryParams("num1"));
+            float num2 = Float.parseFloat(req.queryParams("num2"));
 
             return "magnitud = " + Math.sqrt(Math.pow(num1,2) + Math.pow(num2,2));
 
