@@ -37,26 +37,26 @@ public class page {
                 "            var campo3 = document.getElementById(\"campo3\").value;\n" +
                 "            var campo4 = document.getElementById(\"campo4\").split(\",\");\n" +
                         "    var campo5 = document.getElementById(\"campo4\").split(\",\");\n" +
-                "var URL =" + "http://localhost:36000/" + "\n"+
-                "                    fetch(URL\" + \"sin/\" + \"campo1)\n" +
+                "var URL =" + "http://localhost:4567/" + "\n"+
+                "                    fetch(URL\" + \"sin/?num=campo1)\n" +
                         "                .then(response => response.text())\n" +
                         "                .then(data => {\n" +
                         "                    document.getElementById(\"resultado\").innerHTML = \"Resultado Campo 1: \" + data;\n" +
                         "                });\n" +
                         "\n" +
-                        "            fetch(URL\" + \"cos/\" + \"campo2)\n" +
+                        "            fetch(URL\" + \"cos?num=campo2)\n" +
                         "                .then(response => response.text())\n" +
                         "                .then(data => {\n" +
                         "                    document.getElementById(\"resultado\").innerHTML += \"<br>Resultado Campo 2: \" + data;\n" +
                         "                });\n" +
                         "\n" +
-                        "            fetch(URL\" + \"palindromo/\" + \"campo3)\n" +
+                        "            fetch(URL\" + \"palindromo?word=campo3)\n" +
                         "                .then(response => response.text())\n" +
                         "                .then(data => {\n" +
                         "                    document.getElementById(\"resultado\").innerHTML += \"<br>Resultado Campo 3: \" + data;\n" +
                         "                });\n" +
                         "\n" +
-                        "            fetch(URL\" + \"magnitud/\" + \"campo4/ + campo5)\n" +
+                        "            fetch(URL\" + \"magnitud?num1=campo4&num2=campo5)\n" +
                         "                .then(response => response.text())\n" +
                         "                .then(data => {\n" +
                         "                    document.getElementById(\"resultado\").innerHTML += \"<br>Resultado Campo 4: \" + data;\n" +
