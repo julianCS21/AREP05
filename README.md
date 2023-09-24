@@ -63,18 +63,19 @@ Aqui nos debera de cargar la siguiente pagina, con la cual podemos empezar a hac
 ![image](https://github.com/julianCS21/AREP05/assets/96396177/83973d80-690f-45e8-8973-910fe351bf32)
 
 
+Tambien, para evitar todos estos pasos podemos bajar y correr la imagen desde el dockerhub con este comando
 
 
+	docker run -d  -p 36001:6000 --name sparkapp juliancs21/sparkapp
 
 
+ Donde 36001 es el puerto de la maquina fisica(puede ser cualquier puerto) y 6000 el puerto del contenedor(este si debe ser igual ya que se configuro para poder mapearse a ese puerto), y debe aparecer algo asi:
 
 
+ ![image](https://github.com/julianCS21/AREP05/assets/96396177/33c42cd0-a1fe-4990-b391-2e11b9bb8d1a)
 
 
-
-
-
-
+ 
 
 ---
 ### Corriendo test
