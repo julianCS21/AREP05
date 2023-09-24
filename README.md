@@ -73,7 +73,7 @@ Tambien, para evitar todos estos pasos podemos bajar y correr la imagen desde el
 
 
 
- Por ultimo accedemos a nuestro navegador de confianza con la siguiente URL
+ Por ultimo accedemos a nuestro navegador de confianza con la siguiente URL:
 
 	 http://localhost:36001/bonoForms
 
