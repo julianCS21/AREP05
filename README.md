@@ -63,7 +63,7 @@ Aqui nos debera de cargar la siguiente pagina, con la cual podemos empezar a hac
 ![image](https://github.com/julianCS21/AREP05/assets/96396177/83973d80-690f-45e8-8973-910fe351bf32)
 
 
-Tambien, para evitar todos estos pasos podemos bajar y correr la imagen desde el dockerhub con este comando
+Tambien, para evitar todos estos pasos podemos bajar y correr la imagen desde el DockerHub con este comando
 
 
 	docker run -d  -p 36001:6000 --name sparkapp juliancs21/sparkapp
@@ -93,36 +93,19 @@ Ejecutamos el comando
 
 La estructura del programa consta de varias capas, cada una con su función específica:
 
-### HTTPserver
+### server
 
 
-La capa HTTPserver actúa como punto de entrada para las solicitudes entrantes, dirigiéndolas hacia las partes apropiadas del programa.
+La capa server actúa como punto de entrada para las solicitudes entrantes, dirigiéndolas hacia las partes apropiadas del programa.
 
-### Controllers
-
-
-La capa de Controllers se encarga de recibir las solicitudes del servidor y dirigirlas hacia los servicios correspondientes, actuando como intermediarios entre el servidor y la lógica de negocio.
-
-### Services
+### view
 
 
-La capa de Services contiene la lógica de negocio y se encarga de realizar las operaciones requeridas por las solicitudes del usuario. Aquí también definimos la interfaz funcional y la implementación de los métodos para crear los endpoints y obtener estos métodos de la estructura de datos que maneja.
+La capa view contiene las vistas que presenta el servidor.
 
-### ExternalWebServices
+### services
 
-
-La capa ExternalWebServices se dedica a interactuar con servicios web externos, permitiendo a la aplicación acceder a recursos y funcionalidades fuera de su alcance directo.
-
-### Static
-
-
-La capa Static almacena archivos estáticos como HTML, JS, CSS y archivos de imagen. Estos archivos se sirven a los usuarios para presentar la interfaz de usuario en sus navegadores.
-
-### HTTPObjects
-
-
-La capa HTTPObjects contiene los objetos HTTP (request y response) utilizados para la implementación de la interfaz funcional (clase anónima) y así poder implementar funciones lambda.
-
+La capa services contiene la logica del programa, donde estan ubicados los endpoints del servidor web.
 
 
 Esta estructura de capas facilita la organización, mantenimiento y escalabilidad del programa al separar las responsabilidades en componentes claros y definidos.
@@ -140,6 +123,7 @@ Esta estructura de capas facilita la organización, mantenimiento y escalabilida
 * [Html](https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/HTML_basics): es un lenguaje de marcado que estructura una página web y su contenido.
 * [JavaScript](https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript): lenguaje de programación que los desarrolladores utilizan para hacer paginas web dinamicas.
 * [CSS](https://developer.mozilla.org/es/docs/Web/CSS) Lenguaje para darles estilos a paginas web.
+* [Docker](https://www.docker.com) Automatiza el despliegue de aplicaciones dentro de contenedores de software.
 
 
 ## Autor
