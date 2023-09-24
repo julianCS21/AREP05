@@ -1,4 +1,4 @@
-# TALLER 05 : TALLER DE DE MODULARIZACIÓN CON VIRTUALIZACIÓN E INTRODUCCIÓN A DOCKER
+# TALLER 05 : TALLER  DE MODULARIZACIÓN CON VIRTUALIZACIÓN E INTRODUCCIÓN A DOCKER
 
 Proyecto para profundizar temas de modularización por medio de virtualización usando Docker.
 
